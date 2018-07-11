@@ -8,17 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require("../../node_modules/@angular/core");
+var model_module_1 = require("../model/model.module");
+var platform_browser_1 = require("../../node_modules/@angular/platform-browser");
+var forms_1 = require("@angular/forms");
+var store_component_1 = require("./store.component");
+var StoreModule = (function () {
+    function StoreModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: "app",
-            template: "<store></store>"
+    StoreModule = __decorate([
+        core_1.NgModule({
+            imports: [model_module_1.ModelModule, platform_browser_1.BrowserModule, forms_1.FormsModule],
+            declarations: [store_component_1.StoreComponent],
+            exports: [store_component_1.StoreComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], StoreModule);
+    return StoreModule;
 }());
-exports.AppComponent = AppComponent;
+exports.StoreModule = StoreModule;
